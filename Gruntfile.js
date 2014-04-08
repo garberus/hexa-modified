@@ -39,7 +39,8 @@ module.exports = function(grunt) {
           cleancss: true
         },
         files: {
-          'dist/css/style.css': 'less/styles.less'
+          'dist/css/style.css': 'less/style.less',
+          'dist/css/editor-style.css': 'less/editor-style.less'
         }
       }
     },
@@ -48,6 +49,13 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'dist/css/',
         src: 'style.css',
+        dest: '../vemstur/wp-content/themes/hexa/',
+        filter: 'isFile'
+      },
+      php: {
+        expand: true,
+        cwd: 'php/',
+        src: '**/*.*',
         dest: '../vemstur/wp-content/themes/hexa/',
         filter: 'isFile'
       }
