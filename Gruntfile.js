@@ -45,10 +45,17 @@ module.exports = function(grunt) {
       }
     },
     copy: {
-      dist: {
+      style: {
         expand: true,
         cwd: 'dist/css/',
         src: 'style.css',
+        dest: '../vemstur/wp-content/themes/hexa/',
+        filter: 'isFile'
+      },
+      editorstyle: {
+        expand: true,
+        cwd: 'dist/css/',
+        src: 'editor-style.css',
         dest: '../vemstur/wp-content/themes/hexa/',
         filter: 'isFile'
       },
@@ -57,6 +64,13 @@ module.exports = function(grunt) {
         cwd: 'php/',
         src: '**/*.*',
         dest: '../vemstur/wp-content/themes/hexa/',
+        filter: 'isFile'
+      },
+      favicon: {
+        expand: true,
+        cwd: '.',
+        src: 'favicon.ico',
+        dest: '../vemstur/',
         filter: 'isFile'
       }
     },
