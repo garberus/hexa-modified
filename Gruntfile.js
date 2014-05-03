@@ -45,6 +45,13 @@ module.exports = function(grunt) {
       }
     },
     copy: {
+      logo: {
+        expand: true,
+        cwd: 'img/',
+        src: 'logo-web.png',
+        dest: '../vemstur/wp-content/themes/hexa/',
+        filter: 'isFile'
+      },
       style: {
         expand: true,
         cwd: 'dist/css/',
