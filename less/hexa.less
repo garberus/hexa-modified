@@ -625,8 +625,8 @@ textarea {
 
 img.alignleft,
 .wp-caption.alignleft {
-  border-top: 14px solid #e9e7e3;
-  border-bottom: 14px solid #e9e7e3;
+  border-top: 14px solid @primary_color;
+  border-bottom: 14px solid @primary_color;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: -96px;
@@ -646,8 +646,8 @@ img.alignleft,
 
 img.alignright,
 .wp-caption.alignright {
-  border-top: 14px solid #e9e7e3;
-  border-bottom: 14px solid #e9e7e3;
+  border-top: 14px solid @primary_color;
+  border-bottom: 14px solid @primary_color;
   margin-right: -96px;
   margin-top: 0;
   margin-bottom: 0;
@@ -1664,16 +1664,20 @@ a:hover, a:focus, a:active {
   border-right-color: @video_color;
   content: "\f104";
 }
+.type-podcast.hentry .entry-format:before,
 .hentry.format-audio .entry-format:before {
   border-right-color: @audio_color;
   content: "\f109";
 }
+.type-podcast.hentry,
 .hentry.format-audio {
   border-color: @audio_color;
 }
+.type-podcast.hentry .entry-format,
 .hentry.format-audio .entry-format {
   background: @audio_color;
 }
+.type-podcast.hentry .entry-format:after,
 .hentry.format-audio .entry-format:after {
   border-left-color: @audio_color;
 }
@@ -2032,7 +2036,7 @@ a.more-link:hover {
 }
 
 .wp-caption {
-  background: #e9e7e3;
+  background: @background_color;
   margin-bottom: 28px;
   max-width: 100%;
 }
@@ -2043,10 +2047,11 @@ a.more-link:hover {
 }
 
 .wp-caption-text {
-  color: #97756a;
+  color: @text_color;
   font-size: 0.77778em;
+  font-style: italic;
   line-height: 2.05714em;
-  margin: 14px 0;
+  margin: 5px 0;
   padding: 0 1%;
 }
 
@@ -2662,4 +2667,9 @@ div.sharedaddy div.sd-block {
 }
 .social-links ul a[href*="/feed"]:before {
   content: "\f413";
+}
+
+.podcast_meta {
+  font-size: 0.77778em;
+  margin-bottom: 14px;
 }
