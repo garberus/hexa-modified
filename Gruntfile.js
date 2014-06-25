@@ -79,6 +79,13 @@ module.exports = function(grunt) {
         src: 'favicon.ico',
         dest: '../vemstur/',
         filter: 'isFile'
+      },
+      languages: {
+        expand: true,
+        cwd: 'languages/',
+        src: '**/*.*',
+        dest: '../vemstur/wp-content/themes/hexa/languages',
+        filter: 'isFile'
       }
     },
     clean: {
