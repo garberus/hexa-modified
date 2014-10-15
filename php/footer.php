@@ -41,6 +41,19 @@
 <?php wp_footer(); ?>
 
 
+<script type="text/javascript">
+	jQuery('.mejs-controls').on('click', '.mejs-play button', function(e) {
+		// track play events
+		if (ga) {
+			ga('send', 'event', 'media-bar', 'click', 'play');
+		}
+	}).on('click', '.mejs-pause button', function() {
+		// track pause events
+		if (ga) {
+			ga('send', 'event', 'media-bar', 'click', 'pause');
+		}
+	});
+</script>
 
 </body>
 
