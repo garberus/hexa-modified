@@ -129,7 +129,7 @@ add_action( 'widgets_init', 'hexa_widgets_init' );
 function hexa_scripts() {
 	wp_enqueue_style( 'hexa-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'hexa-titillium-web' );
+	wp_enqueue_style( 'hexa-roboto' );
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.3' );
 
 	wp_enqueue_script( 'hexa-menus', get_template_directory_uri() . '/js/menus.js', array( 'jquery' ), '20120206', true );
@@ -184,9 +184,9 @@ function hexa_google_fonts() {
 
 	} */
 
-    if ( 'off' !== _x( 'on', 'Titillium Web font: on or off', 'hexa' ) ) {
+    if ( 'off' !== _x( 'on', 'Roboto Web font: on or off', 'hexa' ) ) {
 
-        wp_register_style( 'hexa-titillium-web', "$protocol://fonts.googleapis.com/css?family=Titillium+Web:400,300italic,300,400italic,600,700&subset=latin,latin-ext" );
+        wp_register_style( 'hexa-roboto', "$protocol://fonts.googleapis.com/css?family=Roboto:300" );
 
     }
 
@@ -201,7 +201,7 @@ function hexa_admin_scripts( $hook_suffix ) {
 	if ( 'appearance_page_custom-header' != $hook_suffix )
 		return;
 
-	wp_enqueue_style( 'hexa-titillium-web' );
+	wp_enqueue_style( 'hexa-roboto' );
 
 }
 add_action( 'admin_enqueue_scripts', 'hexa_admin_scripts' );
@@ -216,7 +216,7 @@ function hexa_mce_css( $mce_css ) {
 
 	$protocol = is_ssl() ? 'https' : 'http';
 
-	$font = "$protocol://fonts.googleapis.com/css?family=Titillium+Web:400,300italic,300,400italic,600,700&subset=latin,latin-ext";
+	$font = "$protocol://fonts.googleapis.com/css?family=Roboto:300";
 
 	if ( empty( $font ) )
 		return $mce_css;

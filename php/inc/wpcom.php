@@ -38,7 +38,7 @@ function hexa_dequeue_fonts() {
 		}
 		*/
         if ( $customfonts && $customfonts['site-title']['id'] && $customfonts['headings']['id'] && $customfonts['body-text']['id'] ) {
-            wp_dequeue_style( 'hexa-titillium-web' );
+            wp_dequeue_style( 'hexa-roboto' );
         }
 	}
 }

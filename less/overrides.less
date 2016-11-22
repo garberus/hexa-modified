@@ -11,12 +11,18 @@
 }
 .site-title {
   font-size: 3em;
-  text-transform: uppercase;
   a {
     color: #fff;
-    background: url('logo-web.png') 0 10px no-repeat;
+    background: url('logo-web.png') 0 2px no-repeat;
+    background-size: 64px 58px;
     padding-left: 75px;
   }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .site-title a {
+      background: url('logo-web@2x.png') 0 2px no-repeat;
+      background-size: 64px 58px;
+    }
 }
 .toggles {
   margin: -15px 0 0;
